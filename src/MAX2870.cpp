@@ -185,7 +185,7 @@ void MAX2870::init(uint8_t SSpin, uint8_t LockPinNumber, bool Lock_Pin_Used, uin
   if (Lock_Pin_Used == true) {
     pinMode(LockPinNumber, INPUT_PULLUP) ;
   }
-  SPI.begin();
+  SPI.begin(MAX2870_PIN_SS);
 }
 
 int MAX2870::SetStepFreq(uint32_t value) {
